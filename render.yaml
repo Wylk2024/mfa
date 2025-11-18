@@ -1,8 +1,6 @@
-# Render service configuration
-# See: https://render.com/docs/deploy-python
 services:
   - type: web
-    name: flask-mfa
+    name: flask-mfa-v2
     env: python
     region: oregon
     plan: free

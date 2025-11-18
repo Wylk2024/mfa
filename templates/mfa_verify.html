@@ -1,13 +1,17 @@
-<!doctype html>
-<html>
-  <head><meta charset="utf-8"><title>Verificar MFA</title></head>
-  <body>
-    <h1>Verificar código MFA</h1>
-    <p>Usuário: {{ username }}</p>
-    <form method="post">
-      <label>Código TOTP: <input name="code" required></label><br>
-      <button type="submit">Verificar</button>
-    </form>
-    <p><a href="/logout">Cancelar / Logout</a></p>
-  </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h4>Verificar código MFA</h4>
+        <p>Usuário: <strong>{{ username }}</strong></p>
+        <form method="post">
+          <div class="mb-3"><label class="form-label">Código TOTP</label><input class="form-control" name="code" required></div>
+          <button class="btn btn-success">Verificar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
