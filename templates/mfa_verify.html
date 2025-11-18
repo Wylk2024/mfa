@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Verificar MFA</title></head>
+  <body>
+    <h1>Verificar código MFA</h1>
+    <p>Usuário: {{ username }}</p>
+    <form method="post">
+      <label>Código TOTP: <input name="code" required></label><br>
+      <button type="submit">Verificar</button>
+    </form>
+    <p><a href="/logout">Cancelar / Logout</a></p>
+  </body>
+</html>

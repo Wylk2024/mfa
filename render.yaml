@@ -1,0 +1,10 @@
+# Render service configuration
+# See: https://render.com/docs/deploy-python
+services:
+  - type: web
+    name: flask-mfa
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
